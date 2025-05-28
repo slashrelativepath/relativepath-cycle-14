@@ -16,4 +16,21 @@ else
   brew install nano
 fi
 
+# Git should be installed
+if (git --version)
+then
+  echo "Git already installed"
+else
+  echo "Installing Git"
+  brew install git
+fi
+
+# SSH Key Pair should exist
+if (stat $HOME/.ssh/id_ed25519)
+then
+  echo "SSH Key Pair already exists"
+else
+  echo "Creating SSH Key Pair"
+  ssh-keygen -t ed25519 -f "$HOME/.ssh/id_ed25519" -N ''
+fi
 
