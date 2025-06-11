@@ -34,3 +34,12 @@ else
   ssh-keygen -t ed25519 -f "$HOME/.ssh/id_ed25519" -N ''
 fi
 
+# multipass should be installed
+if (multipass version)
+then
+  echo "Multipass already installed"
+else
+  echo "Installing multipass"
+  brew install multipass
+fi
+
