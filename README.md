@@ -13,4 +13,7 @@ for `Darwin` run:
 for `Linux` run:
 `$SHELL onboarding-linux.sh`
 
+## ollama
 
+`$SHELL create-vm.sh && multipass transfer ollama.sh relativepath:. && 
+multipass shell relativepath`
