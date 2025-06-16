@@ -31,5 +31,5 @@ then
   echo 'multipass is installed.'
 else
   echo 'installing multipass...'
-  sudo apt install -y multipass
+  sudo snap install multipass
 fi
