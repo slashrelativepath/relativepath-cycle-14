@@ -25,6 +25,15 @@ else
   ssh-keygen -t ed25519 -f $HOME/.ssh/id_ed25519 -N ''
 fi
 
+# snap should be installed
+if (snap --version)
+then
+  echo "Snap is already installed"
+else
+  echo "Installing snap"
+  sudo apt install -y snapd
+fi
+
 # multipass should be installed
 if (multipass version)
 then
