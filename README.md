@@ -32,6 +32,8 @@ to delete ollama
 ## Roadmap
 
 * Deploy a webserver
+  `$SHELL create-vm.sh && multipass transfer webserver.sh relativepath: && multipass shell relativepath`
+
 * Deploy docker
 * Deploy a JS node app
 * Reverse proxy upstream microservice
