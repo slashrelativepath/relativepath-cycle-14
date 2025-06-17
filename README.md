@@ -13,7 +13,18 @@ for `Darwin` run:
 for `Linux` run:
 `$SHELL onboarding-linux.sh`
 
+## local environment
+to create a local ubuntu vm
+
+`$SHELL create-vm.sh`
+
+to delete a local vm
+`$SHELL delete-vm.sh`
+
 ## ollama
 
 `$SHELL create-vm.sh && multipass transfer ollama.sh relativepath:. && 
 multipass shell relativepath`
+
+to delete ollama
+`$SHELL delete-vm.sh`

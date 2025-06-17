@@ -1,5 +1,4 @@
-if (test "$(multipass info relativepath | grep 'Name:' | awk '{print 
-$2}')" = 'relativepath')
+if (test "$(multipass info relativepath | grep 'Name:' | awk '{print $2}')" = 'relativepath')
 then
   echo "relative path instance already exists"
 else
