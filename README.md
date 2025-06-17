@@ -28,3 +28,16 @@ multipass shell relativepath`
 
 to delete ollama
 `$SHELL delete-vm.sh`
+
+## Roadmap
+
+* Deploy a webserver
+* Deploy docker
+* Deploy a JS node app
+* Reverse proxy upstream microservice
+* Deploy multiple VMs
+* Deploy prometheus / graphana
+* Deploy python / pytorch / anaconda
+* CI/CD Pipeline
+* Git based app deploy
+* Automated build / deliver / deploy
