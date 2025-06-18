@@ -7,3 +7,7 @@ else
   sudo apt install -y nodejs
 fi
 
+# npm should be installed
+
+
+# express.js module should be installed
