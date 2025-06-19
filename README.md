@@ -35,8 +35,8 @@ to delete ollama
   `$SHELL create-vm.sh && multipass transfer webserver.sh relativepath: && multipass shell relativepath`
 
 * Deploy docker
-* Deploy a JS node app
-  `$SHELL create-vm.sh && multipass transfer node.sh relativepath: && multipass shell relativepath`
+* Deploy a JS node app (this installs node, npm & express)
+  `$SHELL create-vm.sh && multipass transfer node.sh relativepath:. && multipass shell relativepath`
 
 * Reverse proxy upstream microservice
 * Deploy multiple VMs
