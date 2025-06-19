@@ -36,6 +36,8 @@ to delete ollama
 
 * Deploy docker
 * Deploy a JS node app
+  `$SHELL create-vm.sh && multipass transfer node.sh relativepath: && multipass shell relativepath`
+
 * Reverse proxy upstream microservice
 * Deploy multiple VMs
 * Deploy prometheus / graphana
