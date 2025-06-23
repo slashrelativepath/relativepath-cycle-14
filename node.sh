@@ -16,12 +16,11 @@ else
   sudo apt install -y npm
 fi
 
-# express.js module should be installed
-if (npm list -g express)
+# app.service should be deployed
+if (stat /etc/systemd/system/app.service)
 then
-  echo "express is already installed globally."
+  echo "app.service is already deployed."
 else
-  echo "installing express..."
-  sudo npm install -g express
-  sudo npm install -g express-generator
+  echo "deploying app service..."
+  sudo cp /home/ubuntu/app.service /etc/systemd/system/app.service
 fi
