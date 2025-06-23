@@ -1,8 +1,10 @@
+
 [Unit]
 Description=Relative Path Express App
 
 [Service]
 Type=simple
+ExecStartPre=/usr/local/bin/npm install
 ExecStart=/usr/local/bin/node app.js
 WorkingDirectory=/home/ubuntu
 
