@@ -17,7 +17,7 @@ else
 fi
 
 # app.service should be deployed
-if (stat /etc/systemd/system/app.service)
+if (diff /home/ubuntu/app.service /etc/systemd/system/app.service)
 then
   echo "app.service is already deployed."
 else
