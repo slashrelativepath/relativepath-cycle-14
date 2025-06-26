@@ -4,12 +4,12 @@ Description=Relative Path Express App
 
 [Service]
 Type=simple
-ExecStartPre=/usr/local/bin/npm install
-ExecStart=/usr/local/bin/node app.js
+ExecStartPre=/usr/bin/npm install
+ExecStart=/usr/bin/node app.js
 WorkingDirectory=/home/ubuntu
 
-User=nobody
-Group=nogroup
+User=ubuntu
+Group=ubuntu
 
 # Environment variables:
 Environment=NODE_ENV=production
