@@ -5,7 +5,7 @@ Description=Relative Path Express App
 [Service]
 Type=simple
 ExecStartPre=/usr/bin/npm install
-ExecStart=/usr/bin/node app.js
+ExecStart=/usr/bin/node api.js
 WorkingDirectory=/home/ubuntu
 
 User=ubuntu
