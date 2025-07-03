@@ -1,13 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 
 app.get('/customer', (req, res) => {
   res.send('Hello from Customer!')
 })
 
-app.get('/widget', (req, res) => {
-  res.send('Hello from Widget!')
+app.get('/identity', (req, res) => {
+  res.send('Hello from Identity!')
 })
 
 

@@ -1,0 +1,29 @@
+
+[Unit]
+Description=Relative Path Express App
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/npm install
+ExecStart=/usr/bin/node hello.js
+WorkingDirectory=/home/ubuntu
+
+User=ubuntu
+Group=ubuntu
+
+# Environment variables:
+Environment=NODE_ENV=production
+
+# Allow many incoming connections
+LimitNOFILE=infinity
+
+# Allow core dumps for debugging
+LimitCORE=infinity
+
+StandardInput=null
+StandardOutput=syslog
+StandardError=syslog
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
