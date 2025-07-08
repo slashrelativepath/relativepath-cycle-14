@@ -81,4 +81,48 @@ else
   sudo apt install -y nginx
 fi
 
+# default nginx site should be disabled
+if (! stat /etc/nginx/sites-enabled/default)
+then
+  echo "default nginx site already disabled"
+else
+  echo "disabling nginx default site..."
+  sudo rm /etc/nginx/sites-enabled/default
+  sudo systemctl reload nginx
+fi
+
+# /var/www/microservices should exist
+if (stat /var/www/microservices)
+then
+  echo "/var/www/microservices already exists"
+else
+  echo "creating /var/www/microservices..."
+  sudo mkdir -p /var/www/microservices
+fi
+
+# /var/www/microservices/index.html should exist
+if (stat /var/www/microservices/index.html)
+then
+  echo "/var/www/microservices/index.html already exists"
+else
+  echo "creating /var/www/microservices/index.html..."
+  cat <<-'EOF' | sudo tee /var/www/microservices/index.html
+<html>
+<title>Microservices app</title>
+<body>
+<h1>Microservices app</h1>
+</body>
+</html>
+EOF
+fi 
+
+# microservices.conf should be enabled
+if (diff microservices.conf /etc/nginx/conf.d/microservices.conf)
+then
+  echo "microservices.conf is already enabled"
+else
+  echo "enabling microservices.conf..."
+  sudo cp microservices.conf /etc/nginx/conf.d/microservices.conf
+  sudo systemctl reload nginx
+fi
 
