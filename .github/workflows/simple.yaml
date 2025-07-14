@@ -5,3 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "This is the simple job step."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        run: |
+          ls -la
+          uname -a
+          ps
+          ip a
