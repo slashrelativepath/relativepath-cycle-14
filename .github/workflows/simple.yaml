@@ -2,13 +2,12 @@ name: Simple RP Pipeline
 on: [push]
 jobs:
   Build:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-latest
     steps:
       - run: echo "This is the simple job step."
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: |
-          ls -la
-          uname -a
-          ps
-          ip a
+      - name: Deploy Microservice
+        run: $SHELL deploy-microservice.sh
+      - name: Test Microservice Deploy
+        run: curl localhost
