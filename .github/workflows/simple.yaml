@@ -2,7 +2,7 @@ name: Simple RP Pipeline
 on: [push]
 jobs:
   Build:
-    runs-on: macos-latest
+    runs-on: ubuntu-24.04-arm
     steps:
       - run: echo "This is the simple job step."
       - name: Check out repository code
