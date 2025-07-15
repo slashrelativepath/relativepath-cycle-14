@@ -7,7 +7,7 @@ jobs:
       - run: echo "This is the simple job step."
       - name: Check out repository code
         uses: actions/checkout@v4
-        run: |
+      - run: |
           ls -la
           uname -a
           ps
