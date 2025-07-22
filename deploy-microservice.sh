@@ -81,6 +81,16 @@ else
   sudo apt install -y nginx
 fi
 
+# nginx should be running
+if (systemctl is-active nginx.service)   
+then
+  echo "nginx.service is already running (active)."
+else
+  echo "starting nginx.service..."
+  sudo systemctl restart nginx.service
+fi
+  
+
 # default nginx site should be disabled
 if (! stat /etc/nginx/sites-enabled/default)
 then
